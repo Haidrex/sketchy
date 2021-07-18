@@ -6,15 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Sketchy</title>
 </head>
 
 <body>
-    <div id="container">
-        <button>Clear</button>
-        <div id="grid-container">
+    <h1 id="site-header">Scketchy</h1>
 
+    <div id="container">
+        <div id="grid-controls">
+            <form id="new-grid">
+                <input type="number" id="input-squares" placeholder="Enter size" />
+                <button type="submit" id="submit-form">Submit</button>
+            </form>
+            <button id="clear-button">Clear</button>
         </div>
+        <div id="grid">
+            <div id="grid-container">
+
+            </div>
+        </div>
+
     </div>
 
     <script src="./scripts.js"></script>
