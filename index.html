@@ -19,6 +19,8 @@
                 <input type="number" id="input-squares" placeholder="Enter size" />
                 <button type="submit" id="submit-form">Submit</button>
             </form>
+            <input id="color-picker" value="#FF8D1F" onChange="update(this.jscolor)" data-jscolor="{}" />
+            <button id="eraser-button">Eraser</button>
             <button id="clear-button">Clear</button>
         </div>
         <div id="grid">
@@ -29,7 +31,23 @@
 
     </div>
 
+    <script src="./jscolor/jscolor.js"></script>
+    <script>
+        jscolor.presets.default = {
+            width: 120,
+            position: 'left',
+            previewPosition: 'left',
+            previewSize: 40,
+            palette: [
+                '#000000', '#7d7d7d', '#870014', '#ec1c23', '#ff7e26',
+                '#fef100', '#22b14b', '#00a1e7', '#3f47cc', '#a349a4',
+                '#ffffff', '#c3c3c3', '#b87957', '#feaec9', '#ffc80d',
+                '#eee3af', '#b5e61d', '#99d9ea', '#7092be', '#c8bfe7',
+            ],
+        };
+    </script>
     <script src="./scripts.js"></script>
+
 </body>
 
 </html>

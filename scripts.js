@@ -14,7 +14,6 @@ function makeRows(rows, cols) {
 makeRows(16, 16);
 const clear = document.getElementById("clear-button");
 const gridForm = document.forms['new-grid'];
-
 clear.addEventListener("click", function (e) {
     let cells = document.getElementsByClassName("grid-item");
     for (let i = 0; i < cells.length; i++) {
@@ -32,3 +31,12 @@ gridForm.addEventListener("submit", function (e) {
     makeRows(value, value);
 });
 
+const eraser = document.getElementById("eraser-button");
+eraser.addEventListener("click", function (e) {
+    color = "white";
+});
+
+function update(picker) {
+    color = picker.toRGBString();
+};
+jscolor.trigger('input change');
